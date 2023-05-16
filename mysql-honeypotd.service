@@ -1,0 +1,11 @@
+[Unit]
+Description=Low interaction MySQL honeypot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/mysql-honeypotd
+
+[Install]
+WantedBy=multi-user.target
